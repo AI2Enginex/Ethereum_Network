@@ -82,8 +82,11 @@ class ReadTokenBalance(GetTokens):
 
 
 if __name__ == '__main__':
+    
 
-    balance = ReadTokenBalance(url='https://mainnet.infura.io/v3/6df36ff34190461dbd182dbd4b0c56ef',
+
+    url = input()
+    balance = ReadTokenBalance(url=url,
                                address='0xF977814e90dA44bFA03b6295A0616a897441aceC')
     
     print('Ethereum: ',balance.get_ethereum_balance())
